@@ -1,28 +1,26 @@
-package com.shakaz.camel.model;
+package com.shakaz.camel.dto;
 
-public class Asset {
+public class AssetDTO {
 
-    private String _id;
-    private String _rev;
+    private String id;
+    private String revision;
     private String name;
     private String contentUrl;
 
-    private AssetMetadata assetMetadata;
-
     public String getId() {
-        return _id;
+        return id;
     }
 
     public void setId(String id) {
-        this._id = id;
+        this.id = id;
     }
 
     public String getRevision() {
-        return _rev;
+        return revision;
     }
 
     public void setRevision(String revision) {
-        this._rev = revision;
+        this.revision = revision;
     }
 
     public String getName() {
@@ -39,17 +37,5 @@ public class Asset {
 
     public void setContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
-    }
-
-    public AssetMetadata getAssetMetadata() {
-        return assetMetadata;
-    }
-
-    public void setAssetMetadata(AssetMetadata assetMetadata) {
-        this.assetMetadata = assetMetadata;
-    }
-
-    public boolean ingestedWithContent() {
-        return getContentUrl() != null;
     }
 }
