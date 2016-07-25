@@ -1,4 +1,5 @@
 rootProject.name = 'camel-sample'
 include 'ingest-service'
 include 'download-service'
+include 'transfer-asset-model'
 

@@ -1,6 +1,8 @@
 package com.shakaz.camel.model;
 
-public class TransferAsset {
+import java.io.Serializable;
+
+public class TransferAsset implements Serializable{
 
     private String contentUrl;
 

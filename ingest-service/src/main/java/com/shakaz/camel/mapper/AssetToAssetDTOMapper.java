@@ -5,12 +5,12 @@ import com.shakaz.camel.model.Asset;
 
 public class AssetToAssetDTOMapper {
 
-    public Asset map(AssetDTO assetDTO) {
-        Asset asset = new Asset();
+    public AssetDTO map(Asset asset) {
+        AssetDTO assetDTO = new AssetDTO();
 
-        asset.setContentUrl(assetDTO.getContentUrl());
-        asset.setName(assetDTO.getName());
+        assetDTO.setContentUrl(asset.getContentUrl());
+        assetDTO.setName(asset.getName());
 
-        return asset;
+        return assetDTO;
     }
 }

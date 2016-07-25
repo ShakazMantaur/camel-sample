@@ -8,10 +8,8 @@ public class AssetDTOToAssetMapper {
     public Asset map(AssetDTO assetDTO) {
         Asset asset = new Asset();
 
-        asset.setId(assetDTO.getId());
         asset.setContentUrl(assetDTO.getContentUrl());
         asset.setName(assetDTO.getName());
-        asset.setRevision(assetDTO.getRevision());
 
         return asset;
     }
