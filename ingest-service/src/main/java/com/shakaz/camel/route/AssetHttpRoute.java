@@ -1,6 +1,7 @@
 package com.shakaz.camel.route;
 
 import com.shakaz.camel.dto.AssetDTO;
+import com.shakaz.camel.exception.AssetNotFoundException;
 import com.shakaz.camel.mapper.AssetDTOToAssetMapper;
 import com.shakaz.camel.mapper.AssetToAssetDTOMapper;
 import com.shakaz.camel.model.Asset;
@@ -48,7 +49,7 @@ public class AssetHttpRoute extends SpringRouteBuilder {
                         .bean(new AssetToAssetDTOMapper(), "map")
                         .marshal().json(Gson).convertBodyTo(String.class)
                     .otherwise()
-                        .throwException(RuntimeException.class, "Asset not found")
+                        .throwException(new AssetNotFoundException())
                 .end();
     }
 }
